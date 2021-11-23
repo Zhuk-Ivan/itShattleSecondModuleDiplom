@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diplom</title>
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <div class="row gx-0"> 
+            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div id="wrapper"></div> 
+                <div class="row main-text gx-0"> 
+                    <div id="wrapper"></div> 
+                    <div class="col-lg-4" id='authentication'>
+                        <div class="card">
+                            <form class="d-flex flex-column" id="login-form">
+                                <div class="h3 text-left entry-header">Для прохождения опроса внесите свои данные</div>
+                                <div class="d-flex flex-column align-items-left input-field my-3">
+                                    <label for="name" class="input-label">Имя</label>
+                                    <div style="display:flex;">
+                                        <input type="text" class="form-control login-input" id="name"> 
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column align-items-left input-field mb-4">
+                                    <label for="last-name" class="input-label">Фамилия</label>
+                                    <div style="display:flex;">
+                                        <input type="text" class="form-control" id="last-name"> 
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column align-items-left input-field mb-4">
+                                    <label for="age" class="input-label">Возраст</label>
+                                    <div style="display:flex;">
+                                        <input type="number" class="form-control" id="age"> 
+                                    </div>
+                                </div>
+                                <div class="my-3 d-flex justify-content-end"> 
+                                    <input id="auth" type="button" value="Продолжить" class="btn btn-primary"> 
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" id='questionnaire' style='display:none;'>
+                        <div class="card questions">
+                            <div class="h3 text-center entry-header">Добро пожаловать, <span id='user-full-name'></span></div>
+                            <form class="d-flex flex-row" id="questionnaire-form" style='justify-content: space-between;'>
+                                <div class="col-lg-5 d-flex flex-column">
+                                <div class="d-flex flex-column align-items-left my-3" id='firstQuestion' data-progress='0'>
+                                    <label for="cinema-attendance" class="input-label">1) Как часто вы посещаете кинотеатры?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cinema-attendance" id="week" value="Несколько раз в неделю" >
+                                        <label class="form-check-label" for="week">
+                                            Несколько раз в неделю  
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cinema-attendance" id="month" value="Несколько раз в месяц" >
+                                        <label class="form-check-label" for="month">
+                                            Несколько раз в месяц  
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cinema-attendance" id="year" value="Несколько раз в год" >
+                                        <label class="form-check-label" for="year">
+                                            Несколько раз в год 
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cinema-attendance" id="less-often" value="Реже" >
+                                        <label class="form-check-label" for="less-often">
+                                            Реже  
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="d-flex flex-column align-items-left my-3" id='secondQuestion' data-progress='0'>
+                                    <label for="movie-type" class="input-label">2) Какие ваши любимые жанры кино?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name='movie-type'  value="Боевик" id="Action">
+                                        <label class="form-check-label" for="Action">
+                                            Боевик
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name='movie-type'  value="Детектив" id="Detective">
+                                        <label class="form-check-label" for="Detective">
+                                            Детектив
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name='movie-type'  value="Комедия" id="Comedy">
+                                        <label class="form-check-label" for="Comedy">
+                                            Комедия
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name='movie-type'  value="Драма" id="Drama">
+                                        <label class="form-check-label" for="Drama">
+                                            Драма
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name='movie-type'  value="Мелодрама" id="Melodrama">
+                                        <label class="form-check-label" for="Melodrama">
+                                            Мелодрама
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name='movie-type'  value="Ужасы" id="Horror">
+                                        <label class="form-check-label" for="Horror">
+                                            Ужасы
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name='movie-type'  value="Триллер" id="Thriller">
+                                        <label class="form-check-label" for="Thriller">
+                                            Триллер
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="d-flex flex-column align-items-left input-field my-3 " id='thirdQuestion' data-progress='0'>
+                                    <label for="last-memorable-movie" class="input-label">3) Последний фильм, который произвел впечатление?</label>
+                                    <div style="display:flex;">
+                                        <input type="text" class="form-control" id="last-memorable-movie"> 
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column align-items-left input-field my-3" id='fourthQuestion' data-progress='0'>
+                                    <label for="favourite-actor" class="input-label">4) Ваш любимый актер/актриса?</label>
+                                    <div style="display:flex;">
+                                        <input type="text" class="form-control" id="favourite-actor"> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 d-flex flex-column">
+                                <div class="d-flex flex-column align-items-left input-field my-3 " id='fifthQuestion' data-progress='0'>
+                                    <label for="favourite-TV-series" class="input-label">5) Ваш любимый сериал?</label>
+                                    <div style="display:flex;">
+                                        <input type="text" class="form-control" id="favourite-TV-series"> 
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column align-items-left my-3 " id='sixthQuestion' data-progress='0'>
+                                    <label for="film-countries" class="input-label">6) Какое кино вы предпочитаете?</label>
+                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg film-countries" id='film-countries'>
+                                        <option value="1">Советское кино</option>
+                                        <option value="2">Современное отечественное кино</option>
+                                        <option value="3">Зарубежное кино 20-го века</option>
+                                        <option value="4">Современное зарубежное кино</option>
+                                    </select>
+                                </div>
+                                <div class="d-flex flex-column align-items-left my-3 " id='seventhQuestion' data-progress='0'>
+                                    <label for="cannes-film-festival" class="input-label">7) Следите ли вы за Каннским фестивалем?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cannes-film-festival" id="dont-follow-cannes" value="Нет" >
+                                        <label class="form-check-label" for="dont-follow-cannes">
+                                            Нет
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cannes-film-festival" id="follow-cannes" value="Да" >
+                                        <label class="form-check-label" for="follow-cannes">
+                                            Да
+                                        </label>
+                                      </div>
+                                      <div class="d-flex flex-column align-items-left my-3" id='eighthQuestion' data-progress='0'>
+                                        <label for="movie-type" class="input-label">8) С какой целью вы смотрите кино?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Для расширения кругозора" id="to-expand-outlook" name='watching-purpose'>
+                                            <label class="form-check-label" for="to-expand-outlook">
+                                                Для расширения кругозора
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Для развлечения" id="for-entertainment" name='watching-purpose'>
+                                            <label class="form-check-label" for="for-entertainment">
+                                                Для развлечения
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Для получения информации" id="for-information" name='watching-purpose'>
+                                            <label class="form-check-label" for="for-information">
+                                                Для получения информации
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Для приобщения к искусству" id="join-the-art" name='watching-purpose'>
+                                            <label class="form-check-label" for="join-the-art">
+                                                Для приобщения к искусству
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            <div style='display:flex; justify-content: space-between;'>
+                                <div class="my-3 d-flex justify-content-end"> 
+                                    <input id="answer-questionnaire" type="button" value="Отправить ответы" class="btn btn-primary"> 
+                                </div>
+                                <div class="my-3 d-flex justify-content-start"> 
+                                    <input id="modal-button" type="button" value="Посмотреть результаты" class="btn btn-primary" style='display:none;'> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal" class="col-lg-6" style='display: none;'>
+                        <div class="card">
+                            <h4><b>Спасибо, что прошли наш опрос! Вот ваши ответы:</b></h4>
+                            <p>Вы посещаете кинотеатры <span class='user-answer' id='firstAnswer'></span></p>
+                            <p>Ваши любимые жанры кино: <span class='user-answer' id='secondAnswer'></span></p>
+                            <p>Последний фильм, который произвел на вас впечатление: <span class='user-answer' id='thirdAnswer'></span></p>
+                            <p>Ваш любимый актер/актриса: <span class='user-answer' id='fourthAnswer'></span></p>
+                            <p>Ваш любимый сериал: <span class='user-answer' id='fifthAnswer'></span></p>
+                            <p>Вы предпочитаете: <span class='user-answer'  id='sixthAnswer'></span></p>
+                            <p>Вы <span class='user-answer' id='seventhAnswer'></span> за Каннским фестивалем</p>
+                            <p>Вы смотрите кино <span class='user-answer' id='eighthAnswer'></span></p>
+                            <button type="button" class="btn btn-secondary" id='cancelModal'>Закрыть</button>
+                        </div>  
+                    </div>                        
+                </div>
+                <div id="wrapper"></div> 
+                <div class="carousel-inner">
+                    <div class="carousel-item active"  data-bs-interval="2000">
+                    </div>
+                    <div class="carousel-item"  data-bs-interval="2000">
+                    </div>
+                    <div class="carousel-item"  data-bs-interval="2000">
+                    </div>
+                    <div class="carousel-item"  data-bs-interval="2000">
+                    </div>
+                    <div class="carousel-item"  data-bs-interval="2000">
+                    </div>
+                </div>          
+            </div>
+        </div>
+    </div>
+</body>
+</html>
